@@ -28,17 +28,16 @@ body{
     top: 0;
     left: 0;
     z-index: 100;
-    background: none;
-    transition: all 0.3s ease;
 }
 
 .header .logo{
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .header .logo img{
-    width: 20%;
+    width: 130%;
     height: 3rem;
     top: 0;
     left: 0;
@@ -47,6 +46,9 @@ body{
 .header .logo h3{
     font-size: 2.5rem;
     color: #00bfff;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
 }
 
 .header .navbar ul{
@@ -72,6 +74,13 @@ body{
 
 .header .logo i{
     padding: 0.5rem;
+}
+
+.header .fa-bars{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
 }
 
 .header .fa-bars{
