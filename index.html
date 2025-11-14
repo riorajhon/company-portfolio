@@ -24,7 +24,9 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo"><img src="./images/image.png" alt=""><h3>SOBAPPS</h3></a>
+        <a href="#" class="logo"><img src="./images/image.png" alt="">
+            <h3>SOBAPPS</h3>
+        </a>
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
@@ -383,10 +385,11 @@
                 width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div> -->
         <div class="contact-form">
-            <form action="https://formsubmit.co/riorajhon19930303@gmail.com" method="POST">
+            <!-- <form action="https://formsubmit.co/riorajhon19930303@gmail.com" method="POST"> -->
+            <form id="contact-form">
                 <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
-                <input type="tel" name="phone" pattern="[0-9]{10}" required placeholder="Contact number"
-                    maxlength="10" class="contact-form-phone">
+                <input type="tel" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10"
+                    class="contact-form-phone">
                 <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
                 <textarea placeholder="Your Message" name="message" class="contact-form-txtarea" required></textarea>
                 <input type="hidden" name="_subject" value="New Contact Form Submission - Sobapps">
@@ -478,8 +481,10 @@
                             <li><i class="ion-ios-arrow-forward"></i> <a href="#">Home</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="#about">About us</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="#service">Our services</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="terms-and-conditions.html">Terms & condition</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="privacy-policy.html">Privacy policy</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="terms-and-conditions.html">Terms &
+                                    condition</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="privacy-policy.html">Privacy policy</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -540,5 +545,17 @@
 
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    emailjs.init("yfo_dQtPOCXhhpfGE"); // Your public key
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        emailjs.sendForm("service_uwiue7o", "template_fzte9kl", this)
+            .then(() => alert("Message sent!"))
+            .catch(() => alert("Failed to send message."));
+    });
+</script>
 
 </html>
