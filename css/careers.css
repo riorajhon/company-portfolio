@@ -28,7 +28,13 @@ body{
     top: 0;
     left: 0;
     z-index: 100;
-    position: fixed;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+.header .logo{
+    display: flex;
+    align-items: center;
 }
 
 .header .logo img{
@@ -36,6 +42,11 @@ body{
     height: 3rem;
     top: 0;
     left: 0;
+}
+
+.header .logo h3{
+    font-size: 2.5rem;
+    color: #00bfff;
 }
 
 .header .navbar ul{
