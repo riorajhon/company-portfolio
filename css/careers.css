@@ -479,6 +479,7 @@ body{
     .header .fa-bars{
         display: block;
         color: 	white;
+        margin-right: 1rem;
     }
 
     .header .fa-bars:hover{
@@ -521,17 +522,95 @@ body{
 
     .home{
         min-height: 60vh;
+        background-position: center;
+        background-attachment: scroll;
     }
 
     .home h2{
         color: #fff;
-        font-size: 4rem;
+        font-size: 3rem;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .career-heading{
+        padding: 2rem;
+    }
+
+    .career-heading h1{
+        font-size: 3rem;
+    }
+
+    .career-heading p{
+        font-size: 1.8rem;
+    }
+
+    .career-form{
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .career-form input,
+    .career-form textarea{
+        font-size: 1.6rem;
+    }
+
+    .radio-class{
+        padding: 1rem;
+    }
+
+    .radio-class .name{
+        font-size: 2rem;
+    }
+
+    .radio{
+        font-size: 1.6rem;
     }
 
     .back-to-top {
         width: 30px;
         height: 30px;
         font-size: 30px;
+    }
+}
+
+@media (max-width: 768px){
+    .home{
+        min-height: 50vh;
+    }
+
+    .home h2{
+        font-size: 2.5rem;
+    }
+
+    .career-form{
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .footer .footer-top .footer-links,
+    .footer .footer-top .footer-contact,
+    .footer .footer-top .footer-newsletter{
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 500px){
+    .header .logo h3{
+        font-size: 2rem;
+    }
+
+    .home h2{
+        font-size: 2rem;
+    }
+
+    .career-heading h1{
+        font-size: 2.5rem;
+    }
+
+    .career-form{
+        width: 98%;
+        padding: 1rem;
     }
 }
 
